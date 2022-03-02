@@ -17,4 +17,8 @@ Build:
  
     mvn integration-test
     
+    
+ throughput = task / time unit    
+ Throughput matters when we have a concurrent flow of tasks and we want to perform as many tasks as possible as fast as possible. In this case, throughput is the right performance metrics.
+ Thread Pooling is one of the techniques to improve througput.
      
