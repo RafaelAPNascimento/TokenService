@@ -5,6 +5,7 @@ import com.example.model.UserToken;
 import com.example.service.AsyncTokenService;
 import com.example.service.SimpleAsyncTokenService;
 
+import java.util.Objects;
 import java.util.concurrent.CompletableFuture;
 
 public class SimpleAsyncTokenServiceImpl implements SimpleAsyncTokenService {
@@ -13,7 +14,7 @@ public class SimpleAsyncTokenServiceImpl implements SimpleAsyncTokenService {
 
     public SimpleAsyncTokenServiceImpl(AsyncTokenService tokenService) {
 
-        this.tokenService = tokenService;
+        this.tokenService = Objects.requireNonNull(tokenService);
     }
 
     @Override

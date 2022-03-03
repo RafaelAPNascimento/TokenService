@@ -11,6 +11,7 @@ import com.sun.net.httpserver.HttpHandler;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
+import java.util.Objects;
 import java.util.logging.Logger;
 
 public class RequestHandler implements HttpHandler {
@@ -21,7 +22,7 @@ public class RequestHandler implements HttpHandler {
 
     public RequestHandler(SimpleAsyncTokenService tokenService) {
 
-        this.tokenService = tokenService;
+        this.tokenService = Objects.requireNonNull(tokenService);
     }
 
     @Override
